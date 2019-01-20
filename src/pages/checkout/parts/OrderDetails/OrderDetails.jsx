@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   InputField,
+  TextArea,
 } from 'components';
 
 const OrderDetails = (props) => {
@@ -14,7 +15,7 @@ const OrderDetails = (props) => {
   const onChange = (e) => {
     const {
       target: {
-        name, 
+        name,
         value,
       },
     } = e;
@@ -22,6 +23,10 @@ const OrderDetails = (props) => {
   };
   return (
     <div className="order-details">
+      <h6>
+        Order Details
+      </h6>
+      <hr />
       <InputField
         label="First Name"
         name="firstName"
@@ -32,6 +37,13 @@ const OrderDetails = (props) => {
         label="Last Name"
         name="lastName"
         value={lastName}
+        onChange={onChange}
+      />
+      <TextArea
+        label="Notes"
+        name="notes"
+        value={notes}
+        rows={5}
         onChange={onChange}
       />
     </div>

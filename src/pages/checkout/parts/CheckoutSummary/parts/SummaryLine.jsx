@@ -8,7 +8,7 @@ const SummaryLine = (props) => {
     <div className="summary-line">
       <hr />
       <div className="spread-columns">
-        <h6>Summary</h6>
+        <h6>Total</h6>
         <span>{summaryText}</span>
       </div>
     </div>

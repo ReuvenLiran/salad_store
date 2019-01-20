@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  FormGroup,
-} from '.';
+import { FormGroup } from '.';
 
-const InputField = (props) => {
+const TextArea = (props) => {
   const {
     label,
     ...other
@@ -13,7 +11,7 @@ const InputField = (props) => {
     <FormGroup
       label={label}
     >
-      <input
+      <textarea
         {...other}
         className="form-control"
       />
@@ -21,6 +19,7 @@ const InputField = (props) => {
   );
 };
 
-InputField.propTypes = {};
-
-export default InputField;
+TextArea.propTypes = {
+  label: PropTypes.node.isRequired,
+};
+export default TextArea;

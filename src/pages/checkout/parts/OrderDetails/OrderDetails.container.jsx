@@ -11,6 +11,7 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = state => ({
   lastName: state.salad.orderDetails.lastName,
   firstName: state.salad.orderDetails.firstName,
+  notes: state.salad.orderDetails.notes,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderDetails);

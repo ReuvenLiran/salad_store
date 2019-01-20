@@ -13,6 +13,10 @@ const CheckoutSummary = (props) => {
 
   return (
     <div className="checkout__summary">
+      <h6>
+        Checkout Summary
+      </h6>
+      <hr />
       <ul>
         {ingredients.map(({ name, count, price }) => (
           <Ingredient

@@ -10,6 +10,7 @@ const initalState = {
   orderDetails: {
     firstName: '',
     lastName: '',
+    notes: '',
   },
   // checked: new Set(),
 };
