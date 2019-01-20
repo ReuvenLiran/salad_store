@@ -65,17 +65,6 @@ ul {
   }
 }
 
-// span.price {
-//   font-size: 0.7rem;
-// }
-
-// .text {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 100%;
-// }
-
 .page {
   padding: 15px 10px;
   width: 100vw;
@@ -94,6 +83,9 @@ ul {
 }
 
 hr {
-  margin: 0 10px;
   border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.checkout__summary {
+  min-width: 40%;
 }

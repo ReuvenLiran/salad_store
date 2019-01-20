@@ -1,4 +1,5 @@
 export const STORE_DATA = 'STORE_DATA';
+export const UPDATE_FIELD = 'UPDATE_FIELD';
 export const MOVE_ITEM_TO_CART = 'MOVE_ITEM_TO_CART';
 
 export const getData = data => ({
@@ -23,3 +24,10 @@ export const moveToCart = name => (dispatch, getState) => {
     count,
   });
 };
+
+
+export const updateField = (name, value) => ({
+  type: UPDATE_FIELD,
+  name,
+  value,
+});

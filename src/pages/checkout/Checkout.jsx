@@ -3,29 +3,10 @@ import PropTypes from 'prop-types';
 import {
   INGREDIENT_SHAPE,
 } from 'types';
-
-const Ingredient = (props) => {
-  const {
-    name, count, price,
-  } = props;
-  return (
-    <li className="checkout-ingredient spread-columns">
-      <span className="name">{name}</span>
-      <span className="ingredient__price">{`${count} X ${price}$`}</span>
-    </li>
-  );
-};
-
-const SummaryLine = (props) => {
-  const { summary } = props;
-  return (
-    <div>
-      <hr />
-      <h6>Summary:</h6>
-      <span>{summary}</span>
-    </div>
-  );
-};
+import {
+  CheckoutSummary,
+  OrderDetails,
+} from './parts';
 
 const Mock = [
   {
@@ -39,28 +20,8 @@ const Mock = [
   },
 ];
 
-const CheckoutSummary = (props) => {
-  const {
-    summary,
-    ingredients,
-  } = props;
+const Fields = (props) => {
 
-  return (
-    <div className="checkout__summary">
-      <ul>
-        {ingredients.map(({ name, count, price }) => (
-          <Ingredient
-            count={count}
-            price={price}
-            name={name}
-          />
-        ))}
-      </ul>
-      <SummaryLine
-        summary={summary}
-      />
-    </div>
-  );
 };
 
 
@@ -72,18 +33,13 @@ const Checkout = (props) => {
   const summary = 3;
   return (
     <div className="page">
-      <ul>
-        {ingredients.map(({ name, count, price }) => (
-          <Ingredient
-            count={count}
-            price={price}
-            name={name}
-          />
-        ))}
-      </ul>
-      <SummaryLine
-        summary={summary}
-      />
+      <div className="spread-columns">
+        <OrderDetails />
+        <CheckoutSummary
+          ingredients={ingredients}
+          summary={summary}
+        />
+      </div>
     </div>
   );
 };
