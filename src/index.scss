@@ -1,3 +1,6 @@
+@import "./pages/Ingredients/parts/IngredientItem/ingredientItem";
+@import "./pages/Ingredients/ingredients";
+
 $full-page: calc(100vh - 2.6rem);
 
 .landing-page  {
@@ -20,7 +23,7 @@ $full-page: calc(100vh - 2.6rem);
     margin-bottom: 2rem;
   } 
 }
-
+ 
 header {
   background-color: black;
   color: white;
@@ -42,7 +45,8 @@ header {
 }
 
 ul {
-  padding: 5px 10px;
+  padding: 0;
+  // padding: 5px 10px;
   list-style-type: none;
   width: 100%;
   li {
@@ -61,24 +65,32 @@ ul {
   }
 }
 
-span.price {
-  font-size: 0.7rem;
+// span.price {
+//   font-size: 0.7rem;
+// }
+
+// .text {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   width: 100%;
+// }
+
+.page {
+  padding: 15px 10px;
+  width: 100vw;
+  height: $full-page;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.text {
+.spread-columns {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.ingredients {
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: $full-page;
 }
 
 hr {

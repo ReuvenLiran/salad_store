@@ -36,12 +36,12 @@ const IngredientItem = (props) => {
           {/* add_shopping_cart */}
         </i>
       </Button>
-      <div className="text">
-        <span className="name">
+      <div className="ingredient__text spread-columns">
+        <span className="ingredient__name">
           {name}
         </span>
-        <span className="price">
-          {`${price}$`}
+        <span className="ingredient__price">
+          {price}
         </span>
       </div>
     </li>

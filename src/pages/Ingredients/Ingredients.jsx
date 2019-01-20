@@ -14,7 +14,7 @@ class Ingredients extends React.PureComponent {
       },
     } = this.props;
     return (
-      <div className="ingredients">
+      <div className="page">
         {<IngredientList
           ingredients={items}
         />}

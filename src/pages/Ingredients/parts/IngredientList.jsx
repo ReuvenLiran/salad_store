@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   INGREDIENT_SHAPE,
 } from 'types';
-import IngredientItem from './IngerientItem.container';
+import { IngredientItem } from './IngredientItem';
 
 const IngredientList = (props) => {
   const {

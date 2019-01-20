@@ -9,9 +9,9 @@ const Ingredient = (props) => {
     name, count, price,
   } = props;
   return (
-    <li className="checkout-ingredient text">
+    <li className="checkout-ingredient spread-columns">
       <span className="name">{name}</span>
-      <span className="price">{`${count} X ${price}$`}</span>
+      <span className="ingredient__price">{`${count} X ${price}$`}</span>
     </li>
   );
 };
@@ -38,6 +38,32 @@ const Mock = [
     price: 1.3,
   },
 ];
+
+const CheckoutSummary = (props) => {
+  const {
+    summary,
+    ingredients,
+  } = props;
+
+  return (
+    <div className="checkout__summary">
+      <ul>
+        {ingredients.map(({ name, count, price }) => (
+          <Ingredient
+            count={count}
+            price={price}
+            name={name}
+          />
+        ))}
+      </ul>
+      <SummaryLine
+        summary={summary}
+      />
+    </div>
+  );
+};
+
+
 const Checkout = (props) => {
   // const {
   //   summary = 3,
@@ -45,7 +71,7 @@ const Checkout = (props) => {
   const ingredients = Mock;
   const summary = 3;
   return (
-    <div>
+    <div className="page">
       <ul>
         {ingredients.map(({ name, count, price }) => (
           <Ingredient
