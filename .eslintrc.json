@@ -1,0 +1,17 @@
+{
+    "extends": "airbnb",
+    "rules": {
+        "react/forbid-prop-types": 1,
+        "import/prefer-default-export": 0
+    },
+    "parser": "babel-eslint",
+    "globals": {
+        "fetch": true,
+        "navigator": true,
+        "document": true,
+        "window": true
+    },
+    "settings": {
+      "import/core-modules": ["components", "services", "types"]
+    }
+}

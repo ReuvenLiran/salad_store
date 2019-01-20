@@ -1,0 +1,87 @@
+$full-page: calc(100vh - 2.6rem);
+
+.landing-page  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: $full-page;
+  color: white;
+  $darken: rgba(0, 0, 0, 0.4);
+  background: linear-gradient($darken, $darken),
+    url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/07/1487090968-delish-guacamolesalad-2.jpg');
+
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h4 {
+    margin-bottom: 2rem;
+  } 
+}
+
+header {
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+
+.order-button {
+  $red: rgb(229, 9, 20);
+  background-color: $red;
+  // transform: translateY(-30%);
+  color: white;
+  font-weight: 550;
+
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.07);
+    color: white;
+  }
+}
+
+ul {
+  padding: 5px 10px;
+  list-style-type: none;
+  width: 100%;
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.btn-checkout {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+span.price {
+  font-size: 0.7rem;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ingredients {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: $full-page;
+}
+
+hr {
+  margin: 0 10px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
