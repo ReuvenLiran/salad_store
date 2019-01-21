@@ -8,9 +8,8 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),
 });
 
-
 const mapStateToProps = state => ({
-  isOpen: state.salad.isOpen,
+  isOpen: state.modal.isOpen,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderSummaryModal);
