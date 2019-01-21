@@ -1,1 +1,1 @@
-export { default } from './OrderSummaryModalFooter.container';
+export { default } from './OrderSummaryModalFooter';

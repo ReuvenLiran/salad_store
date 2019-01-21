@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { Button } from 'components';
+import {
+  CHECKOUT_PAGE,
+} from 'consts';
 
 const ProceedToCheckout = (props) => {
   const {
@@ -11,7 +14,7 @@ const ProceedToCheckout = (props) => {
     <Button
       className="btn order-button"
       // className="btn btn-primary"
-      onClick={() => history.push('/checkout')}
+      onClick={() => history.push(CHECKOUT_PAGE)}
     >
       Proceed To Checkeout
     </Button>

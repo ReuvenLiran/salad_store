@@ -4,4 +4,3 @@ export const getOrderDetails = state => ({
   notes: state.checkout.orderDetails.notes,
 });
 
-

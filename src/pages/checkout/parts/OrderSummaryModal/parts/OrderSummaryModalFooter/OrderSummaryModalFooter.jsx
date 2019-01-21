@@ -5,23 +5,12 @@ import {
 } from 'components';
 import CloseButton from './parts/CloseButton';
 
-const OrderSummaryModalFooter = (props) => {
-  const {
-    closeModal,
-  } = props;
-  return (
-    <ModalFooter key="movie-modal-footer">
-      <CloseButton
-        onClick={closeModal}
-      >
+const OrderSummaryModalFooter = props => (
+  <ModalFooter key="movie-modal-footer">
+    <CloseButton>
         Close
-      </CloseButton>
-    </ModalFooter>
-  );
-};
-
-OrderSummaryModalFooter.propTypes = {
-  closeModal: PropTypes.func.isRequired,
-};
+    </CloseButton>
+  </ModalFooter>
+);
 
 export default OrderSummaryModalFooter;

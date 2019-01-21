@@ -1,25 +1,24 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import {
   Button,
 } from 'components';
+import {
+  INGREDIENTS_PAGE,
+} from 'consts';
 
 const OrderButton = (props) => {
-  console.log(props);
   const {
     history,
   } = props;
   return (
     <Button
       className="btn order-button"
-      onClick={() => history.push('/ingredients')}
+      onClick={() => history.push(INGREDIENTS_PAGE)}
     >
       Order Salad
     </Button>
   );
 };
-// OrderButton.propTypes = {
-//   prop,
-// };
+
 export default withRouter(OrderButton);
