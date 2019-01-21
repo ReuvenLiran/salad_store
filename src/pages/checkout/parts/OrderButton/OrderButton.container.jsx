@@ -4,11 +4,7 @@ import {
 } from 'actions';
 import OrderButton from './OrderButton';
 
-const mapDispatchToProps = dispatch => ({
-  openModal: () => dispatch(openModal()),
-});
-
-const mapStateToProps = (state) => {
+const getDisabled = (state) => {
   const {
     checkout: {
       orderDetails: {
@@ -18,9 +14,15 @@ const mapStateToProps = (state) => {
     },
   } = state;
   const disabled = !name || !email;
-  return ({
-    disabled,
-  });
+  return disabled;
 };
+
+const mapDispatchToProps = dispatch => ({
+  openModal: () => dispatch(openModal()),
+});
+
+const mapStateToProps = state => ({
+  disabled: getDisabled(state),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderButton);

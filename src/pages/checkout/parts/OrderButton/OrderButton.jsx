@@ -9,16 +9,18 @@ const OrderButton = (props) => {
   } = props;
   return (
     <Button
-      // disabled={disabled}
+      disabled={disabled}
       className="btn order-button"
       onClick={openModal}
     >
       Order
     </Button>
-
   );
 };
 
-OrderButton.propTypes = {};
+OrderButton.propTypes = {
+  openModal: PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired,
+};
 
 export default OrderButton;

@@ -18,7 +18,6 @@ const OrderSummaryModal = (props) => {
     <Modal
       onClose={closeModal}
       isOpen={isOpen}
-      className="movie-modal"
     >
       <OrderSummaryModalHeader />
       <OrderSummaryModalBody />

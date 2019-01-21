@@ -10,9 +10,7 @@ const OrderSummaryModalHeader = (props) => {
     closeModal,
   } = props;
   return (
-    <ModalHeader
-      key="movie-modal-header"
-    >
+    <ModalHeader>
       <h5>Order Summary</h5>
       <ModalCloseButton
         onClose={closeModal}

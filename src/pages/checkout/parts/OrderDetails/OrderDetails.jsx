@@ -4,6 +4,9 @@ import {
   InputField,
   TextArea,
 } from 'components';
+import {
+  ORDER_DETAILS_SHAPE,
+} from 'types';
 import OrderDetailsHeader from './OrderDetailsHeader';
 
 const OrderDetails = (props) => {
@@ -48,9 +51,9 @@ const OrderDetails = (props) => {
   );
 };
 
-// OrderDetails.propTypes = {
-//   firstName
-//   lastName,
-//   notes,
-// };
+OrderDetails.propTypes = {
+  ...ORDER_DETAILS_SHAPE,
+  updateField: PropTypes.func.isRequired,
+};
+
 export default OrderDetails;

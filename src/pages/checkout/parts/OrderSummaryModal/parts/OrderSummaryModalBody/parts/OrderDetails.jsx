@@ -1,21 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+  ORDER_DETAILS_SHAPE,
+} from 'types';
+import Field from './Field';
+import {
   OrderDetailsHeader,
 } from '../../../../OrderDetails';
-
-const Field = (props) => {
-  const {
-    field,
-    value,
-  } = props;
-  return (
-    <li>
-      <span className="field">{`${field}:`}</span>
-      <span className="value">{value}</span>
-    </li>
-  );
-};
 
 const OrderDetails = (props) => {
   const {
@@ -45,9 +36,7 @@ const OrderDetails = (props) => {
 };
 
 OrderDetails.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  notes: PropTypes.string.isRequired,
+  ...ORDER_DETAILS_SHAPE,
 };
 
 export default OrderDetails;
