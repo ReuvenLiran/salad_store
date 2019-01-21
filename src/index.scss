@@ -30,6 +30,10 @@ header {
   height: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .order-button {
   $red: rgb(229, 9, 20);
   background-color: $red;
