@@ -1,2 +1,2 @@
-export { default as SummaryLine } from './SummaryLine';
-export { default as Ingredient } from './Ingredient';
+export { decontainerfault as SummaryLine } from './SummaryLine';
+export { default as IngredientList } from './IngredientList';

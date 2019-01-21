@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SummaryLine = (props) => {
-  const { summary } = props;
-  const summaryText = `${summary} $`;
+  const { sum } = props;
+  const summaryText = `${sum} $`;
   return (
     <div className="summary-line">
       <hr />
@@ -13,6 +13,10 @@ const SummaryLine = (props) => {
       </div>
     </div>
   );
+};
+
+SummaryLine.propTypes = {
+  sum: PropTypes.number.isRequired,
 };
 
 export default SummaryLine;

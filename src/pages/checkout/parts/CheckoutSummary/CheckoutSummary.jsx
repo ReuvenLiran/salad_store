@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   SummaryLine,
   Ingredient,
+  IngredientList,
 } from './parts';
 
 const CheckoutSummary = (props) => {
@@ -17,15 +18,8 @@ const CheckoutSummary = (props) => {
         Checkout Summary
       </h6>
       <hr />
-      <ul>
-        {ingredients.map(({ name, count, price }) => (
-          <Ingredient
-            count={count}
-            price={price}
-            name={name}
-          />
-        ))}
-      </ul>
+      <IngredientList />
+
       <SummaryLine
         summary={summary}
       />
@@ -34,3 +28,13 @@ const CheckoutSummary = (props) => {
 };
 
 export default CheckoutSummary;
+
+// <ul>
+//         {ingredients.map(({ name, count, price }) => (
+//           <Ingredient
+//             count={count}
+//             price={price}
+//             name={name}
+//           />
+//         ))}
+//       </ul>
