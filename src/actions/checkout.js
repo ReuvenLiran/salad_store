@@ -1,0 +1,26 @@
+export const UPDATE_FIELD = 'UPDATE_FIELD';
+export const MOVE_ITEM_TO_CART = 'MOVE_ITEM_TO_CART';
+
+export const moveToCart = name => (dispatch, getState) => {
+  const {
+    checkout: {
+      itemsToCheckout,
+    },
+  } = getState();
+  const item = itemsToCheckout[name];
+  let count = 1;
+  if (item) {
+    count = item + 1;
+  }
+  dispatch({
+    type: MOVE_ITEM_TO_CART,
+    name,
+    count,
+  });
+};
+
+export const updateField = (name, value) => ({
+  type: UPDATE_FIELD,
+  name,
+  value,
+});
