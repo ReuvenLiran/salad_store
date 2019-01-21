@@ -10,8 +10,8 @@ const initalState = {
   data: [],
   itemsToCheckout: {},
   orderDetails: {
-    firstName: '',
-    lastName: '',
+    name: '',
+    email: '',
     notes: '',
   },
   isOpen: false,

@@ -4,39 +4,37 @@ import {
   InputField,
   TextArea,
 } from 'components';
+import OrderDetailsHeader from './OrderDetailsHeader';
 
 const OrderDetails = (props) => {
   const {
-    firstName,
-    lastName,
+    name,
+    email,
     notes,
     updateField,
   } = props;
   const onChange = (e) => {
     const {
       target: {
-        name,
+        name: fieldName,
         value,
       },
     } = e;
-    updateField(name, value);
+    updateField(fieldName, value);
   };
   return (
     <div className="order-details">
-      <h6>
-        Order Details
-      </h6>
-      <hr />
+      <OrderDetailsHeader />
       <InputField
-        label="First Name"
-        name="firstName"
-        value={firstName}
+        label="Name"
+        name="name"
+        value={name}
         onChange={onChange}
       />
       <InputField
-        label="Last Name"
-        name="lastName"
-        value={lastName}
+        label="Email"
+        name="email"
+        value={email}
         onChange={onChange}
       />
       <TextArea

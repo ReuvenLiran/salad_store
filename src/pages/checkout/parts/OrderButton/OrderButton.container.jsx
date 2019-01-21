@@ -12,12 +12,12 @@ const mapStateToProps = (state) => {
   const {
     salad: {
       orderDetails: {
-        firstName,
-        lastName,
+        name,
+        email,
       },
     },
   } = state;
-  const disabled = !firstName || !lastName;
+  const disabled = !name || !email;
   return ({
     disabled,
   });

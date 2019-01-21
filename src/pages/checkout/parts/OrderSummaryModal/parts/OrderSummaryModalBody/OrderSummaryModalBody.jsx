@@ -5,19 +5,20 @@ import {
 } from 'components';
 import {
   CheckoutSummary,
+  // OrderDetails,
 } from '../../../index';
+import OrderDetails from './parts/OrderDetails.container';
 
-const OrderSummaryModalBody = (props) => {
-  const {
-    prop,
-  } = props;
-  return (
-    <ModalBody>
-      <CheckoutSummary />
-    </ModalBody>
-  );
-};
+const OrderSummaryModalBody = () => (
+  <ModalBody>
+    <CheckoutSummary />
+    <br />
+    <br />
+    <OrderDetails />
+    <br />
+    <br />
+    Thank you, your delivery is on its way.
+  </ModalBody>
+);
 
-// OrderSummaryModalBody.propTypes = {
-// };
 export default OrderSummaryModalBody;
