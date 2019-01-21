@@ -10,7 +10,7 @@ const ModalCloseButton = (props) => {
   } = props;
   return (
     <Button
-      className="modal-close"
+      className="btn close"
       onClick={onClose}
     >
       <span aria-hidden="true">&times;</span>

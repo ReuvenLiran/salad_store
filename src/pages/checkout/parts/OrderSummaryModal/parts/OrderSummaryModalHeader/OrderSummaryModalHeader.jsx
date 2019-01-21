@@ -15,7 +15,7 @@ const OrderSummaryModalHeader = (props) => {
     >
       <h5>Order Summary</h5>
       <ModalCloseButton
-        onClick={closeModal}
+        onClose={closeModal}
       />
     </ModalHeader>
   );

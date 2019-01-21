@@ -49,7 +49,16 @@ export default (state = initalState, action) => {
         { ...state.orderDetails, [name]: value },
       });
     }
-    case OPEN_MODAL || CLOSE_MODAL: {
+    case OPEN_MODAL: {
+      const {
+        isOpen,
+      } = action;
+      return ({
+        ...state,
+        isOpen,
+      });
+    }
+    case CLOSE_MODAL: {
       const {
         isOpen,
       } = action;

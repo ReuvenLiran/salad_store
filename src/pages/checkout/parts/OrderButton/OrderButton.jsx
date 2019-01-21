@@ -9,7 +9,7 @@ const OrderButton = (props) => {
   } = props;
   return (
     <Button
-      disabled={disabled}
+      // disabled={disabled}
       className="btn order-button"
       onClick={openModal}
     >
