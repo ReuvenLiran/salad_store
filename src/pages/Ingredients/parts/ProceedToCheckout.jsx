@@ -13,12 +13,15 @@ const ProceedToCheckout = (props) => {
   return (
     <Button
       className="btn order-button"
-      // className="btn btn-primary"
       onClick={() => history.push(CHECKOUT_PAGE)}
     >
       Proceed To Checkeout
     </Button>
   );
+};
+
+ProceedToCheckout.propTypes = {
+  history: PropTypes.object.isRequired,
 };
 
 export default withRouter(ProceedToCheckout);

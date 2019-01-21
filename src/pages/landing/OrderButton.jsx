@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import {
   Button,
@@ -19,6 +20,10 @@ const OrderButton = (props) => {
       Order Salad
     </Button>
   );
+};
+
+OrderButton.propTypes = {
+  history: PropTypes.object.isRequired,
 };
 
 export default withRouter(OrderButton);
