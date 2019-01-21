@@ -9,7 +9,8 @@ const ProceedToCheckout = (props) => {
   } = props;
   return (
     <Button
-      className="btn btn-primary"
+      className="btn order-button"
+      // className="btn btn-primary"
       onClick={() => history.push('/checkout')}
     >
       Proceed To Checkeout

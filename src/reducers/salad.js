@@ -2,6 +2,8 @@ import {
   STORE_DATA,
   MOVE_ITEM_TO_CART,
   UPDATE_FIELD,
+  CLOSE_MODAL,
+  OPEN_MODAL,
 } from 'actions';
 
 const initalState = {
@@ -12,7 +14,7 @@ const initalState = {
     lastName: '',
     notes: '',
   },
-  // checked: new Set(),
+  isOpen: false,
 };
 
 export default (state = initalState, action) => {
@@ -45,6 +47,15 @@ export default (state = initalState, action) => {
         ...state,
         orderDetails:
         { ...state.orderDetails, [name]: value },
+      });
+    }
+    case OPEN_MODAL || CLOSE_MODAL: {
+      const {
+        isOpen,
+      } = action;
+      return ({
+        ...state,
+        isOpen,
       });
     }
     default:

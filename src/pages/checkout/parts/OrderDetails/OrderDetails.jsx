@@ -43,7 +43,7 @@ const OrderDetails = (props) => {
         label="Notes"
         name="notes"
         value={notes}
-        rows={5}
+        rows={3}
         onChange={onChange}
       />
     </div>

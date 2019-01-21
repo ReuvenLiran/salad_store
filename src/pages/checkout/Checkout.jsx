@@ -6,40 +6,25 @@ import {
 import {
   CheckoutSummary,
   OrderDetails,
+  OrderButton,
+  OrderSummaryModal,
 } from './parts';
-
-const Mock = [
-  {
-    name: 'banana',
-    count: 2,
-    price: 0.3,
-  }, {
-    name: 'apple',
-    count: 3,
-    price: 1.3,
-  },
-];
-
-const Fields = (props) => {
-
-};
 
 
 const Checkout = (props) => {
   // const {
   //   summary = 3,
   // } = props;
-  const ingredients = Mock;
-  const summary = 3;
+  // const ingredients = Mock;
+  // const summary = 3;
   return (
     <div className="page">
       <div className="spread-columns">
         <OrderDetails />
-        <CheckoutSummary
-          ingredients={ingredients}
-          summary={summary}
-        />
+        <CheckoutSummary  />
       </div>
+      <OrderButton />
+      <OrderSummaryModal />
     </div>
   );
 };

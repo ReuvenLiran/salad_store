@@ -33,10 +33,9 @@ header {
 .order-button {
   $red: rgb(229, 9, 20);
   background-color: $red;
-  // transform: translateY(-30%);
   color: white;
   font-weight: 550;
-
+  padding: .375rem 1.5rem;
   transition: transform 0.3s ease-in-out;
   &:hover {
     transform: scale(1.07);
