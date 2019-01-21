@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  FormGroup,
-} from '.';
+import FormGroup from './FormGroup';
 
 const InputField = (props) => {
   const {
@@ -21,6 +19,8 @@ const InputField = (props) => {
   );
 };
 
-InputField.propTypes = {};
+InputField.propTypes = {
+  label: PropTypes.node.isRequired,
+};
 
 export default InputField;

@@ -15,7 +15,7 @@ const toggleModal = (action, state) => {
     ...state,
     isOpen,
   });
-}
+};
 export default (state = initalState, action) => {
   switch (action.type) {
     case OPEN_MODAL: {

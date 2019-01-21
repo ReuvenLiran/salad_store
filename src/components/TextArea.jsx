@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormGroup } from '.';
+import FormGroup from './FormGroup';
 
 const TextArea = (props) => {
   const {

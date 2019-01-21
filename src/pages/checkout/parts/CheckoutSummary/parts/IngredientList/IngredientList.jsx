@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  INGREDIENT_SHAPE,
+} from 'types';
 import Ingredient from './parts/Ingredient';
 
 const IngredientList = (props) => {
@@ -20,6 +23,8 @@ const IngredientList = (props) => {
 };
 
 IngredientList.propTypes = {
-  // ingredients,
+  ingredients: PropTypes.arrayOf(
+    PropTypes.shape(INGREDIENT_SHAPE),
+  ).isRequired,
 };
 export default IngredientList;

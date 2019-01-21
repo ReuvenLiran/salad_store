@@ -1,9 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {
+  INGREDIENT_SHAPE,
+} from 'types';
 
 const Ingredient = (props) => {
   const {
-    name, count, price,
+    name,
+    count,
+    price,
   } = props;
   return (
     <li className="checkout-ingredient spread-columns">
@@ -11,6 +15,10 @@ const Ingredient = (props) => {
       <span className="ingredient__price">{`${count} X ${price}$`}</span>
     </li>
   );
+};
+
+Ingredient.propTypes = {
+  ...INGREDIENT_SHAPE,
 };
 
 export default Ingredient;
