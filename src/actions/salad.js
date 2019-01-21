@@ -9,7 +9,7 @@ export const getData = data => ({
 
 export const moveToCart = name => (dispatch, getState) => {
   const {
-    salad: {
+    checkout: {
       itemsToCheckout,
     },
   } = getState();

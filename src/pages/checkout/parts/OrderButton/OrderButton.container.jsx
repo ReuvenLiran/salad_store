@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state) => {
   const {
-    salad: {
+    checkout: {
       orderDetails: {
         name,
         email,

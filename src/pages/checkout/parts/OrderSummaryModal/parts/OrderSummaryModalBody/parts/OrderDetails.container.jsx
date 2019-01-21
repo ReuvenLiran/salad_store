@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
+import { getOrderDetails } from 'utils';
 import OrderDetails from './OrderDetails';
 
 const mapStateToProps = state => ({
-  name: state.salad.orderDetails.name,
-  email: state.salad.orderDetails.email,
-  notes: state.salad.orderDetails.notes,
+  ...getOrderDetails(state),
 });
 
 export default connect(mapStateToProps)(OrderDetails);

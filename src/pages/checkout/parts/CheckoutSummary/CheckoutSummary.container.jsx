@@ -3,7 +3,9 @@ import CheckoutSummary from './CheckoutSummary';
 
 const mapStateToProps = (state) => {
   const {
-    itemsToCheckout = {},
+    itemsToCheckout,
+  } = state.checkout;
+  const {
     data: {
       items = [],
     },

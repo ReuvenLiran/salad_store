@@ -12,6 +12,6 @@
         "window": true
     },
     "settings": {
-      "import/core-modules": ["components", "services", "types"]
+      "import/core-modules": ["components", "services", "types", "actions"]
     }
 }

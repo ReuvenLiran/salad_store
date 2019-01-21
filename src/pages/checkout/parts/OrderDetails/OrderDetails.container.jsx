@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import {
   updateField,
 } from 'actions';
+import { getOrderDetails } from 'utils';
 import OrderDetails from './OrderDetails';
 
 const mapDispatchToProps = dispatch => ({
@@ -9,9 +10,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  name: state.salad.orderDetails.name,
-  email: state.salad.orderDetails.email,
-  notes: state.salad.orderDetails.notes,
+  ...getOrderDetails(state),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderDetails);
