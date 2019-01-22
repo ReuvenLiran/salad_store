@@ -1,0 +1,50 @@
+@keyframes fade-in {
+  from {
+    transform: translateY(-70%);
+    opacity: 0;
+  } 
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@mixin anim($delay) {
+  animation: 
+  fade-in 
+  0.5s 
+  ease-in-out 
+  $delay
+  both;
+};
+
+@mixin animate-all($num) {
+  @for $i from 1 through $num {
+    & > :nth-child(#{$i}) {
+      @include anim(#{($i - 1) * .35}s)
+    }
+  }
+}
+
+.landing-page  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: $full-page;
+  color: white;
+  $darken: rgba(0, 0, 0, 0.4);
+  background: linear-gradient($darken, $darken),
+    url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/07/1487090968-delish-guacamolesalad-2.jpg');
+
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h4 {
+    margin-bottom: 2rem;
+  } 
+
+  @include animate-all(4);
+}

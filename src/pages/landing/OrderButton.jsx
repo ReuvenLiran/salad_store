@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import {
-  Button,
+  PrimButton,
 } from 'components';
 import {
   INGREDIENTS_PAGE,
@@ -13,12 +13,11 @@ const OrderButton = (props) => {
     history,
   } = props;
   return (
-    <Button
-      className="btn order-button"
+    <PrimButton
       onClick={() => history.push(INGREDIENTS_PAGE)}
     >
       Order Salad
-    </Button>
+    </PrimButton>
   );
 };
 

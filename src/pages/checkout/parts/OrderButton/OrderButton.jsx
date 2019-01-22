@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'components';
+import { PrimButton } from 'components';
 
 const OrderButton = (props) => {
   const {
@@ -8,13 +8,12 @@ const OrderButton = (props) => {
     openModal,
   } = props;
   return (
-    <Button
+    <PrimButton
       disabled={disabled}
-      className="btn order-button"
       onClick={openModal}
     >
       Order
-    </Button>
+    </PrimButton>
   );
 };
 

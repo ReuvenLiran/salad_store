@@ -1,1 +1,1 @@
-export { default as IngredientItem } from './IngredientItem.container';
+export { default } from './IngredientItem';

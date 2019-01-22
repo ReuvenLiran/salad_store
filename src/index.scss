@@ -1,50 +1,12 @@
-@import "./pages/Ingredients/parts/IngredientList/IngredientItem/ingredientItem";
-@import "./pages/Ingredients/ingredients";
-
 $full-page: calc(100vh - 2.6rem);
 
-.landing-page  {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  height: $full-page;
-  color: white;
-  $darken: rgba(0, 0, 0, 0.4);
-  background: linear-gradient($darken, $darken),
-    url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/07/1487090968-delish-guacamolesalad-2.jpg');
-
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  h4 {
-    margin-bottom: 2rem;
-  } 
-}
+@import "./pages/landing/landing-page";
+@import "./components/index";
+@import "./pages/Ingredients/parts/IngredientList/IngredientItem/ingredientItem";
+@import "./pages/Ingredients/ingredients";
  
-header {
-  background-color: black;
-  color: white;
-  height: 100%;
-}
-
 button {
   cursor: pointer;
-}
-
-.order-button {
-  $red: rgb(229, 9, 20);
-  background-color: $red;
-  color: white;
-  font-weight: 550;
-  padding: .375rem 1.5rem;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.07);
-    color: white;
-  }
 }
 
 ul {
@@ -67,7 +29,7 @@ ul {
 }
 
 .page {
-  padding: 15px 10px;
+  padding: 1.5rem 1rem;
   width: 100vw;
   height: $full-page;
   display: flex;
@@ -79,7 +41,6 @@ ul {
 .spread-columns {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   width: 100%;
 }
 
@@ -89,128 +50,6 @@ hr {
 
 .checkout__summary {
   min-width: 40%;
-}
-
-
-
-
-@keyframes modal-content-fade-in {
-  0% { 
-    opacity: 0.3;
-    transform: translate(-50%, -70%);
-  }
-  60% { 
-    opacity: 0.6;
-    transform: translate(-50%, -50%);
-  }
-  100% { 
-    transform: translate(-50%, -50%);
-    opacity: 1;
-  }
-}
-@keyframes modal-content-fade-out {
-  0% { 
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  60% { 
-    opacity: 0.7;
-    transform: translate(-50%, -30%);
-  }
-  100% { 
-    transform: translate(-50%, -30%);
-    opacity: 0;
-  }
-}
-
-@keyframes modal-overlay-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes modal--overlay-fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-$modal-content-fade-in-time: .4s;
-$modal-content-fade-out-time: .5s;
-$modal-overlay-fade-in-time: .2s;
-$modal-overlay-fade-out-time: .25s;
-
-.dialog {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: rgb(222,222,222);
-  // background-color: $modal-background;
-  // color: $white;
-  overflow: auto;
-  border-radius: 2px;
-  outline: none;
-  padding: 20px;
-  width: 50%;
-  min-width: 400px;
-  height: auto;
-
-  .btn.close {
-    // color: $white;
-  }
-  .modal-button {
-    width: 64px;
-    padding: 8px 16px;
-    box-sizing: content-box;
-  }
-  &.ReactModal__Content--after-open{
-    animation: 
-      modal-content-fade-in 
-      $modal-content-fade-in-time 
-      ease-in-out 
-      $modal-overlay-fade-in-time 
-      both;
-  }
-  &.ReactModal__Content--before-close{
-    animation: 
-      modal-content-fade-out 
-      $modal-content-fade-out-time
-      ease-in-out
-      both;
-  }
-}
-
-
-.dialog-overlay {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.3);
-
-  &.ReactModal__Overlay--after-open{
-    animation: 
-      modal-overlay-fade-in 
-      $modal-overlay-fade-in-time
-      ease-in-out
-      both;
-  }
-  
-  &.ReactModal__Overlay--before-close{
-    animation: 
-    modal-overlay-fade-out 
-    $modal-overlay-fade-out-time 
-    ease-in-out 
-    both 
-    $modal-content-fade-out-time;
-  }
-  
 }
 
 .order-details-readonly {
