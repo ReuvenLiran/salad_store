@@ -16,7 +16,7 @@ const OrderDetails = (props) => {
   return (
     <div>
       <OrderDetailsHeader />
-      <ul className="order-details-readonly">
+      <ul className="list-full-width order-details-readonly">
         <Field
           field="Name"
           value={name}

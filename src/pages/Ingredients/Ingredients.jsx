@@ -5,7 +5,7 @@ import {
 } from './parts';
 
 const Ingredients = () => (
-  <div className="page">
+  <div className="page ingredients-page">
     <IngredientList />
     <ProceedToCheckout />
   </div>

@@ -6,10 +6,14 @@ const Field = (props) => {
     field,
     value,
   } = props;
+  let strVal = value;
+  if (strVal.length === 0) {
+    strVal = <span>&mdash;</span>;
+  }
   return (
-    <li>
+    <li className="list-item column-display">
       <span className="field">{`${field}:`}</span>
-      <span className="value">{value}</span>
+      <span className="value">{strVal}</span>
     </li>
   );
 };

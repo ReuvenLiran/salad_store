@@ -10,7 +10,7 @@ const IngredientList = (props) => {
     ingredients,
   } = props;
   return (
-    <ul className="list-full-width">
+    <ul className="list-full-width ingredients-list">
       {ingredients.map(({ price, name }) => (
         <IngredientItem
           price={price}

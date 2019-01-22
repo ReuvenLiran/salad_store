@@ -9,7 +9,7 @@
   }
 }
 
-@mixin anim($delay) {
+@mixin anim-landing-page($delay) {
   animation: 
   fade-in 
   0.5s 
@@ -21,7 +21,7 @@
 @mixin animate-all($num) {
   @for $i from 1 through $num {
     & > :nth-child(#{$i}) {
-      @include anim(#{($i - 1) * .35}s)
+      @include anim-landing-page(#{($i - 1) * .35}s)
     }
   }
 }
@@ -42,6 +42,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  h1 {
+    text-align: center;
+  }
   h4 {
     margin-bottom: 2rem;
   } 

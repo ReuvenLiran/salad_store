@@ -62,8 +62,10 @@ $modal-overlay-fade-out-time: .25s;
   border-radius: 2px;
   outline: none;
   padding: 20px;
-  width: 50%;
-  min-width: 400px;
+  // width: 50%;
+  // min-width: 400px;
+  max-width: 90vw;
+  min-width: 50vw;
   height: auto;
 
   .btn.close {
@@ -74,6 +76,12 @@ $modal-overlay-fade-out-time: .25s;
     padding: 8px 16px;
     box-sizing: content-box;
   }
+
+  .modal-body {
+    overflow-y: auto;
+    max-height: 60vh;
+  }
+
   &.ReactModal__Content--after-open{
     animation: 
       modal-content-fade-in 
