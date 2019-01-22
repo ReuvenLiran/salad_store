@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import {
   INGREDIENT_SHAPE,
 } from 'types';
-import Ingredient from './parts/Ingredient';
+import IngredientItem from './parts/IngredientItem';
 
 const IngredientList = (props) => {
   const {
     ingredients,
   } = props;
   return (
-    <ul>
+    <ul className="list-full-width">
       {ingredients.map(({ name, count, price }) => (
-        <Ingredient
+        <IngredientItem
           count={count}
           price={price}
           name={name}

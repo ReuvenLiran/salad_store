@@ -4,21 +4,18 @@ $full-page: calc(100vh - 2.6rem);
 @import "./components/index";
 @import "./pages/Ingredients/parts/IngredientList/IngredientItem/ingredientItem";
 @import "./pages/Ingredients/ingredients";
- 
-button {
-  cursor: pointer;
-}
 
-ul {
+.list-full-width {
   padding: 0;
   list-style-type: none;
   width: 100%;
-  li {
+  .list-item {
     display: flex;
   }
 }
 
 .btn-checkout {
+  cursor: pointer;
   display: inline-flex;
   background-color: transparent;
   border: none;

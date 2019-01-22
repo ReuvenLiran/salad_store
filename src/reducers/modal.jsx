@@ -1,6 +1,7 @@
 import {
   CLOSE_MODAL,
   OPEN_MODAL,
+  CLEAR_MODAL,
 } from 'actions';
 
 const initalState = {
@@ -24,6 +25,8 @@ export default (state = initalState, action) => {
     case CLOSE_MODAL: {
       return toggleModal(action, state);
     }
+    case CLEAR_MODAL:
+      return initalState;
     default:
       return state;
   }

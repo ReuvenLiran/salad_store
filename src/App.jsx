@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import autobind from 'react-autobind';
 import Alert from 'react-s-alert';
 import {
@@ -6,32 +7,34 @@ import {
 } from 'components';
 import Routes from './Routes';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    autobind(this);
-  }
+class App extends PureComponent {
+ static propTypes = {
+   getData: PropTypes.func.isRequired,
+ }
 
-  componentDidMount() {
-    this.props.getData();
-  }
+ componentDidMount() {
+   const {
+     getData,
+   } = this.props;
+   getData();
+ }
 
-  render() {
-    return (
-      <div className="App">
-        <Header>
+ render() {
+   return (
+     <div className="App">
+       <Header>
           La Salad
-        </Header>
-        <Routes />
-        <Alert
-          html
-          timeout={2000}
-          offset={20}
-          stack={{ limit: 3 }}
-        />
-      </div>
-    );
-  }
+       </Header>
+       <Routes />
+       <Alert
+         html
+         timeout={2000}
+         offset={0}
+         stack={{ limit: 3 }}
+       />
+     </div>
+   );
+ }
 }
 
 export default App;

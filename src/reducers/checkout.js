@@ -1,6 +1,7 @@
 import {
   MOVE_ITEM_TO_CART,
   UPDATE_FIELD,
+  CLEAR_CHECKOUT,
 } from 'actions';
 
 const initalState = {
@@ -37,6 +38,8 @@ export default (state = initalState, action) => {
         { ...state.orderDetails, [name]: value },
       });
     }
+    case CLEAR_CHECKOUT:
+      return initalState;
     default:
       return state;
   }

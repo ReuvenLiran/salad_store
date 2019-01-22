@@ -13,7 +13,7 @@ const IngredientItem = (props) => {
   return (
     <li
       key={name}
-      className="ingredient-item"
+      className="list-item ingredient-item"
     >
       <AddToCart name={name} />
       <div className="ingredient__text spread-columns">

@@ -1,7 +1,11 @@
 import { Button } from 'components';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { closeModal } from 'actions';
+import {
+  closeModal,
+  clearModal,
+  clearCheckout,
+} from 'actions';
 import {
   HOME_PAGE,
 } from 'consts';
@@ -9,6 +13,8 @@ import {
 const mapDispatchToProps = (dispatch, props) => ({
   onClick: () => {
     dispatch(closeModal());
+    dispatch(clearModal());
+    dispatch(clearCheckout());
     setTimeout(() => {
       props.history.push(HOME_PAGE);
     }, 700);
