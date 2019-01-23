@@ -2,7 +2,7 @@ import React from 'react';
 import {
   ModalFooter,
 } from 'components';
-import CloseButton from './parts/CloseButton';
+import CloseButton from './CloseButton';
 
 const OrderSummaryModalFooter = () => (
   <ModalFooter>
