@@ -1,4 +1,4 @@
-import { Button } from 'components';
+import { PrimButton } from 'components';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import {
@@ -21,4 +21,4 @@ const mapDispatchToProps = (dispatch, props) => ({
   },
 });
 
-export default withRouter(connect(null, mapDispatchToProps)(Button));
+export default withRouter(connect(null, mapDispatchToProps)(PrimButton));

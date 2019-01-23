@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Button,
+  PrimButton
 } from 'components';
 
 const ModalCloseButton = (props) => {
@@ -9,12 +10,11 @@ const ModalCloseButton = (props) => {
     onClose,
   } = props;
   return (
-    <Button
-      className="btn close"
+    <PrimButton
       onClick={onClose}
     >
       <span aria-hidden="true">&times;</span>
-    </Button>
+    </PrimButton>
   );
 };
 
