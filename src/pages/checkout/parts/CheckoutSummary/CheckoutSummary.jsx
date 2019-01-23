@@ -5,7 +5,7 @@ import {
 } from './parts';
 
 const CheckoutSummary = () => (
-  <div className="checkout__summary">
+  <div className="checkout-summary">
     <h6>
         Checkout Summary
     </h6>

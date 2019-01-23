@@ -13,7 +13,7 @@ const IngredientItem = (props) => {
   return (
     <li className="list-item checkout-ingredient spread-columns align-items-center ">
       <span className="name">{name}</span>
-      <span className="ingredient__price">{strPrice}</span>
+      <span className="ingredient-price">{strPrice}</span>
     </li>
   );
 };

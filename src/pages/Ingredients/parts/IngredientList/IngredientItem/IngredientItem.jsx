@@ -14,11 +14,11 @@ const IngredientItem = (props) => {
       className="list-item ingredient-item"
     >
       <AddToCart name={name} />
-      <div className="ingredient__text spread-columns align-items-center ">
-        <span className="ingredient__name">
+      <div className="ingredient-text spread-columns align-items-center ">
+        <span className="ingredient-name">
           {name}
         </span>
-        <span className="ingredient__price">
+        <span className="ingredient-price">
           {price}
         </span>
       </div>
