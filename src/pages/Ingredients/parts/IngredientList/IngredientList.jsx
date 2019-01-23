@@ -13,6 +13,7 @@ const IngredientList = (props) => {
     <ul className="list-full-width ingredients-list">
       {ingredients.map(({ price, name }) => (
         <IngredientItem
+          key={name}
           price={price}
           name={name}
         />

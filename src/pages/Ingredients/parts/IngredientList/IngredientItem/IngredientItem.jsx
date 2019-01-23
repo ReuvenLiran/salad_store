@@ -11,7 +11,6 @@ const IngredientItem = (props) => {
   } = props;
   return (
     <li
-      key={name}
       className="list-item ingredient-item"
     >
       <AddToCart name={name} />

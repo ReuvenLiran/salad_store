@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  INGREDIENT_SHAPE,
-} from 'types';
+import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 import {
   Button,
@@ -34,6 +32,7 @@ const AddToCart = (props) => {
 };
 
 AddToCart.propTypes = {
-  ...INGREDIENT_SHAPE,
+  name: PropTypes.string.isRequired,
+  moveToCart: PropTypes.func.isRequired,
 };
 export default AddToCart;
