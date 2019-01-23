@@ -17,7 +17,8 @@
           "services", 
           "types", 
           "actions",
-          "consts"
+          "consts",
+          "utils"
         ]
     }
 }

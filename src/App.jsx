@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import autobind from 'react-autobind';
 import Alert from 'react-s-alert';
 import {
   Header,

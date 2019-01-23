@@ -1,0 +1,70 @@
+$full-page: calc(100vh - 2.6rem);
+$prim-color: #e50914;
+$scroll-bar-color: rgb(163,163,163);
+
+@keyframes fade-in {
+  from {
+    transform: translateY(-70%);
+    opacity: 0;
+  } 
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.list-full-width {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  .list-item {
+    display: flex;
+  }
+}
+.page {
+  padding: 1.5rem 1rem;
+  width: 100vw;
+  height: $full-page;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spread-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+hr {
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 2.5px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+  transition: background-color 0.5s ease;
+  background-color: rgba($scroll-bar-color, .6);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($scroll-bar-color, 1);
+  }
+}
+
+.column-display {
+  display: flex;
+  flex-direction: column;
+}

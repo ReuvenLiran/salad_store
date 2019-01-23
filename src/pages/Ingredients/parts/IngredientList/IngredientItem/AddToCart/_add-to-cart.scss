@@ -1,0 +1,10 @@
+.add-to-cart {
+  cursor: pointer;
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  &:active, &:focus {
+    outline: none;
+  }
+}

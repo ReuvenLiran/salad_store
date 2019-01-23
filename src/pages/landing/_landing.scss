@@ -1,14 +1,3 @@
-@keyframes fade-in {
-  from {
-    transform: translateY(-70%);
-    opacity: 0;
-  } 
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 @mixin anim-landing-page($delay) {
   animation: 
   fade-in 

@@ -7,7 +7,7 @@ import {
   OrderDetailsHeader,
 } from '../../../../OrderDetails';
 
-const OrderDetails = (props) => {
+const OrderDetailsReadOnly = (props) => {
   const {
     name,
     email,
@@ -34,8 +34,8 @@ const OrderDetails = (props) => {
   );
 };
 
-OrderDetails.propTypes = {
+OrderDetailsReadOnly.propTypes = {
   ...ORDER_DETAILS_SHAPE,
 };
 
-export default OrderDetails;
+export default OrderDetailsReadOnly;

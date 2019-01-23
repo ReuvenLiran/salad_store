@@ -22,7 +22,7 @@ const AddToCart = (props) => {
   };
   return (
     <Button
-      className="btn-checkout"
+      className="add-to-cart"
       onClick={onClick}
     >
       <i className="material-icons">

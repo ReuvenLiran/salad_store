@@ -7,7 +7,7 @@ import {
 } from './parts';
 
 const Checkout = () => (
-  <div className="page">
+  <div className="checkout-page page">
     <div className="spread-columns">
       <OrderDetails />
       <CheckoutSummary />

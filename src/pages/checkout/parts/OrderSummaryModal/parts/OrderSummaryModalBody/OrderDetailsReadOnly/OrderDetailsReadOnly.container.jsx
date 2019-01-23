@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { getOrderDetails } from 'utils';
-import OrderDetails from './OrderDetails';
+import OrderDetailsReadOnly from './OrderDetailsReadOnly';
 
 const mapStateToProps = state => ({
   ...getOrderDetails(state),
 });
 
-export default connect(mapStateToProps)(OrderDetails);
+export default connect(mapStateToProps)(OrderDetailsReadOnly);

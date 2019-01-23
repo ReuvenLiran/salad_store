@@ -1,3 +1,5 @@
+@import "./parts/IngredientList/IngredientItem/ingredientItem";
+
 .ingredients-page {
   .ingredients-list {
     @for $i from 1 through 30 {

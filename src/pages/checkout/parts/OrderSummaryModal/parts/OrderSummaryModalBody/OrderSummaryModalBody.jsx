@@ -5,14 +5,14 @@ import {
 import {
   CheckoutSummary,
 } from '../../../index';
-import OrderDetails from './parts/OrderDetails.container';
+import OrderDetailsReadOnly from './OrderDetailsReadOnly';
 
 const OrderSummaryModalBody = () => (
   <ModalBody>
     <CheckoutSummary />
     <br />
     <br />
-    <OrderDetails />
+    <OrderDetailsReadOnly />
     <br />
     <br />
     Thank you, your delivery is on its way.
