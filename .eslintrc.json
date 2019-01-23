@@ -6,6 +6,9 @@
     },
     "parser": "babel-eslint",
     "globals": {
+        "describe": true,
+        "test": true,
+        "expect": true,
         "fetch": true,
         "navigator": true,
         "document": true,
