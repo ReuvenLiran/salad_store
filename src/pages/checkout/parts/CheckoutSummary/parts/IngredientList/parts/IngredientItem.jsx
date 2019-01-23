@@ -11,7 +11,7 @@ const IngredientItem = (props) => {
   } = props;
   const strPrice = `${count} X ${price}$`;
   return (
-    <li className="list-item checkout-ingredient spread-columns">
+    <li className="list-item checkout-ingredient spread-columns align-items-center ">
       <span className="name">{name}</span>
       <span className="ingredient__price">{strPrice}</span>
     </li>

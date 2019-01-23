@@ -14,7 +14,7 @@ const IngredientItem = (props) => {
       className="list-item ingredient-item"
     >
       <AddToCart name={name} />
-      <div className="ingredient__text spread-columns">
+      <div className="ingredient__text spread-columns align-items-center ">
         <span className="ingredient__name">
           {name}
         </span>

@@ -27,9 +27,14 @@ class App extends PureComponent {
        <Routes />
        <Alert
          html
+         position="bottom-left"
+         effect="slide"
          timeout={2000}
-         offset={0}
-         stack={{ limit: 3 }}
+         offset={80}
+         stack={{
+           spacing: 10,
+           limit: 3,
+         }}
        />
      </div>
    );

@@ -1,13 +1,26 @@
-
+@keyframes large {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
 .primary-button {
-  $red: rgb(229, 9, 20);
-  background-color: $red;
-  color: white;
+  background-color: $prim-color;
+  color: rgb(222,222,222);
   font-weight: 550;
   padding: .375rem 1.5rem;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, 
+              color .25s ease-in-out;
   &:hover {
-    transform: scale(1.07);
     color: white;
+    filter: brightness(1.2);
   }
+}
+
+.primary-button.btn:disabled {
+  opacity: 1;
+  filter: grayscale(35%);
+  background-color: rgba($prim-color, 0.75);
 }

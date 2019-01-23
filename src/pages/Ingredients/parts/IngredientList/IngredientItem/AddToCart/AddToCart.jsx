@@ -13,10 +13,7 @@ const AddToCart = (props) => {
   const onClick = (e) => {
     e.preventDefault();
     moveToCart(name);
-    Alert.success(`<b>${name}</b> is added to your cart`, {
-      position: 'bottom-left',
-      effect: 'slide',
-    });
+    Alert.success(`<b>${name}</b> was added to your cart`);
   };
   return (
     <Button
