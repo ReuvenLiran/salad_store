@@ -4,7 +4,7 @@ import {
 import reducer from './salad';
 
 const initalState = {
-  data: [],
+  items: [],
 };
 
 const testInitalState = () => {
@@ -15,9 +15,9 @@ const testInitalState = () => {
 const testStoreData = () => {
   expect(reducer(initalState, {
     type: STORE_DATA,
-    data: ['sss'],
+    items: ['sss'],
   }))
-    .toHaveProperty('data', ['sss']);
+    .toHaveProperty('items', ['sss']);
 };
 
 describe('Test Salad Reducer', () => {

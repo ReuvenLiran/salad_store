@@ -4,9 +4,9 @@ import {
 } from './salad';
 
 const testGetData = () => {
-  const data = {
+  const items = {
     type: STORE_DATA,
-    data: [{
+    items: [{
       a: 1,
     }, {
       a: 2,
@@ -17,7 +17,7 @@ const testGetData = () => {
   }, {
     a: 2,
   }]);
-  expect(result).toEqual(data);
+  expect(result).toEqual(items);
 };
 describe('Test Salad Actions', () => {
   test('testGetData', testGetData);

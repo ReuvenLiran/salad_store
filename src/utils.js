@@ -8,11 +8,7 @@ export const sumPriceItemsToCheckout = (state) => {
   const {
     itemsToCheckout,
   } = state.checkout;
-  const {
-    data: {
-      items = [],
-    },
-  } = state.salad;
+  const { items } = state.salad;
   return items.reduce((total, item) => {
     const { name } = item;
     const count = itemsToCheckout[name];
@@ -28,11 +24,7 @@ export const formatItemsToCheckout = (state) => {
   const {
     itemsToCheckout,
   } = state.checkout;
-  const {
-    data: {
-      items = [],
-    },
-  } = state.salad;
+  const { items } = state.salad;
   return items.reduce((total, item) => {
     const { name } = item;
     const count = itemsToCheckout[name];

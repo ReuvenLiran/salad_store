@@ -1,6 +1,6 @@
 export const STORE_DATA = 'STORE_DATA';
 
-export const getData = data => ({
+export const getData = items => ({
   type: STORE_DATA,
-  data,
+  items,
 });

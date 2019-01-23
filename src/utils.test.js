@@ -26,15 +26,6 @@ const testGetOrderDetails = () => {
 };
 
 const testSumPriceItemsToCheckout = () => {
-  const items = [{
-    name: 'banana',
-    count: 2,
-    price: 2.8,
-  }, {
-    name: 'apple',
-    count: 1,
-    price: 3,
-  }];
   const mock = {
     checkout: {
       itemsToCheckout: {
@@ -43,22 +34,20 @@ const testSumPriceItemsToCheckout = () => {
       },
     },
     salad: {
-      data: {
-        items: [
-          {
-            name: 'banana',
-            price: 1.4,
-          },
-          {
-            name: 'apple',
-            price: 3,
-          },
-          {
-            name: 'orange',
-            price: 4,
-          },
-        ],
-      },
+      items: [
+        {
+          name: 'banana',
+          price: 1.4,
+        },
+        {
+          name: 'apple',
+          price: 3,
+        },
+        {
+          name: 'orange',
+          price: 4,
+        },
+      ],
     },
   };
   const result = sumPriceItemsToCheckout(mock);
@@ -82,22 +71,20 @@ const testFormatItemsToCheckout = () => {
       },
     },
     salad: {
-      data: {
-        items: [
-          {
-            name: 'banana',
-            price: 1.4,
-          },
-          {
-            name: 'apple',
-            price: 3,
-          },
-          {
-            name: 'orange',
-            price: 4,
-          },
-        ],
-      },
+      items: [
+        {
+          name: 'banana',
+          price: 1.4,
+        },
+        {
+          name: 'apple',
+          price: 3,
+        },
+        {
+          name: 'orange',
+          price: 4,
+        },
+      ],
     },
   };
   const result = formatItemsToCheckout(mock);

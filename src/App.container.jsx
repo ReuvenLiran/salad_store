@@ -10,16 +10,12 @@ import { withRouter } from 'react-router-dom';
 import App from './App';
 
 const getData = () => async (dispatch) => {
-  const data = await getIngredientsAPI();
-  return dispatch(getDataAction(data));
+  const items = await getIngredientsAPI();
+  return dispatch(getDataAction(items));
 };
 
 const mapDispatchToProps = dispatch => ({
   getData: () => dispatch(getData()),
 });
 
-const mapStateToProps = state => ({
-  data: state.salad.data,
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(connect(null, mapDispatchToProps)(App));

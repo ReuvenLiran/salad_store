@@ -10,6 +10,7 @@ export const sumItemsByName = (name, itemsToCheckout) => {
   }
   return count;
 };
+
 export const moveToCart = name => (dispatch, getState) => {
   const {
     checkout: {
@@ -29,6 +30,7 @@ export const updateField = (name, value) => ({
   name,
   value,
 });
+
 export const clearCheckout = () => ({
   type: CLEAR_CHECKOUT,
 });

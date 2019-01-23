@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactModal from 'react-modal';
 
-ReactModal.setAppElement('#root');
-
 const Modal = (props) => {
   const {
     isOpen,
@@ -15,6 +13,7 @@ const Modal = (props) => {
 
   return (
     <ReactModal
+      appElement={document.getElementById('root')}
       closeTimeoutMS={750}
       isOpen={isOpen}
       className={classNames('dialog', className)}

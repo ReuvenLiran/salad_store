@@ -3,16 +3,16 @@ import {
 } from 'actions';
 
 const initalState = {
-  data: [],
+  items: [],
 };
 
 export default (state = initalState, action) => {
   switch (action.type) {
     case STORE_DATA: {
-      const { data } = action;
+      const { items } = action;
       return ({
         ...state,
-        data,
+        items,
       });
     }
     default:
