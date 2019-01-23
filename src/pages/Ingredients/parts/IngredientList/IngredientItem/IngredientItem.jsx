@@ -2,7 +2,6 @@ import React from 'react';
 import {
   INGREDIENT_SHAPE,
 } from 'types';
-import Alert from 'react-s-alert';
 import AddToCart from './AddToCart';
 
 const IngredientItem = (props) => {
